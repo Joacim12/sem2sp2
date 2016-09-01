@@ -11,6 +11,7 @@
 ##day4 -js and webforms exercise
 - array of objects (cars)
 - form to add new car
+- create table to see all cars in collection
 - individual button to remove cars
  
 ##SP exercise

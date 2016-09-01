@@ -4,6 +4,7 @@
 - check content of form element;
 - create a js array with objects to hold information from the form.
 - show table with content from the array.
+- Add data from form to array and display in table
 - show how to add and remove a form field from the page based on button click.
 - see the result [link here!](http://45.55.207.235:8080/SP2/)
 

@@ -28,3 +28,29 @@
 - array of taught topics (name, date, teacher initials)
 - button to add comments to a topic (open up a new textarea and submit button)
 - add logo to the navbar
+
+hint:
+You will need javascript closure to make the delete button:
+```javascript
+    var populateTable = function(){
+        tb.innerHTML = "";
+        for (var i = 0; i < students.length; i++) {
+            var row = tb.insertRow(i);
+            row.insertCell(0).innerHTML = students[i].name;
+            row.insertCell(1).innerHTML = students[i].email;
+            row.insertCell(2).innerHTML = students[i].phone;
+            var cell = row.insertCell(3);
+            var btn = document.createElement("button");
+            btn.innerHTML = "Delete";
+            cell.appendChild(btn);
+            btn.onclick = (function(){
+                var inc = i;
+                return function(){
+                     students.splice(inc, 1);
+                    console.log("no: "+inc);
+                    populateTable();
+                };
+            })();
+        }   
+    };
+```
